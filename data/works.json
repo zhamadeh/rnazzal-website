@@ -1,26 +1,26 @@
 [
   {
     "title": "Vibrations from Gaza",
-    "year": "2024",
+    "year": "2023",
     "media": "Short documentary",
-    "cover": "assets/img/vibrations-01.jpg",
-    "alt": "Still from Vibrations from Gaza",
-    "credit": "© Rehab Nazzal"
+    "cover": "assets/img/portrait-nazzal.png",
+    "alt": "Portrait of Rehab Nazzal",
+    "credit": "© Courtesy of the artist / Cinema Politica"
   },
   {
     "title": "Driving in Palestine",
     "year": "2023",
     "media": "Photography / Book",
-    "cover": "assets/img/driving-01.jpg",
-    "alt": "Cover or spread from Driving in Palestine",
-    "credit": "© Rehab Nazzal"
+    "cover": "assets/img/driving-in-palestine.jpg",
+    "alt": "Book cover: Driving in Palestine",
+    "credit": "© Fernwood Publishing / Columbia University Press"
   },
   {
-    "title": "We, the Wild Plants and Fruit Trees",
+    "title": "Lifta",
     "year": "2022",
-    "media": "Photography / Installation",
-    "cover": "assets/img/wild-plants-01.jpg",
-    "alt": "Installation view",
-    "credit": "© Rehab Nazzal"
+    "media": "Photograph",
+    "cover": "assets/img/lifta-2022.jpg",
+    "alt": "Tree growing from ancient stone wall — Lifta",
+    "credit": "© Rehab Nazzal (via Galleries West)"
   }
 ]
