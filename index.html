@@ -1,28 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rehab Nazzal — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rehab Nazzal — Artist & Photographer</title>
+  
+  <!-- Fonts: Inter for UI, Crimson Pro for elegant serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="assets/style.css">
-  <meta name="description" content="Portfolio of Rehab Nazzal, multidisciplinary artist working across photography, video, sound, and installation.">
+  
+  <meta name="description" content="Rehab Nazzal is a Palestinian-born multidisciplinary artist working with photography, video, sound, and installation to examine settler-colonial violence and Palestinian life.">
+  <meta name="author" content="Rehab Nazzal">
 </head>
 <body>
+
 <header>
   <nav class="nav">
     <a class="brand" href="./">Rehab Nazzal</a>
     <div class="spacer"></div>
-    <a href="#works">Works</a>
+    <a href="works.html">Projects</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="publications.html">Publications</a>
     <a href="about.html">About</a>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <div class="kicker">Portfolio</div>
-    <h1>Lens-based work across photography, video, sound, and installation.</h1>
-    <p class="sub">Practices of witnessing and ecology across Palestine — mobility, vibration, flora, and the architectures that shape daily life.</p>
+    <div class="kicker">Multidisciplinary Artist</div>
+    <h1>Documenting life, movement, and resistance across Palestine</h1>
+    <p class="sub">Working with photography, video, sound, and installation to examine the effects of settler-colonial violence on people, land, and ecology.</p>
   </section>
 
   <section id="works" class="gallery">
@@ -30,60 +40,60 @@
     <a class="tile" href="assets/img/driving-silhouette.png"
        data-alt="Driving in Palestine — silhouette"
        data-caption="Driving in Palestine (2010–2020) · Photograph">
-      <img src="assets/img/driving-silhouette.png" alt="Driving in Palestine — silhouette">
+      <img src="assets/img/driving-silhouette.png" alt="Driving in Palestine — silhouette" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/driving-book.jpg"
        data-alt="Driving in Palestine book cover"
        data-caption="Driving in Palestine (2023) · Book · Fernwood Publishing">
-      <img src="assets/img/driving-book.jpg" alt="Driving in Palestine book cover">
+      <img src="assets/img/driving-book.jpg" alt="Driving in Palestine book cover" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/area-a-sign.png"
        data-alt="Area A roadside sign"
        data-caption="Area A (West Bank) · Photograph">
-      <img src="assets/img/area-a-sign.png" alt="Area A roadside sign">
+      <img src="assets/img/area-a-sign.png" alt="Area A roadside sign" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/ruined-building.jpg"
        data-alt="Ruined building, Jordan Valley"
        data-caption="Jordan Valley · Photograph">
-      <img src="assets/img/ruined-building.jpg" alt="Ruined building, Jordan Valley">
+      <img src="assets/img/ruined-building.jpg" alt="Ruined building, Jordan Valley" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/dead-sea.jpg"
        data-alt="Dead Sea shoreline"
        data-caption="Dead Sea shoreline · Photograph">
-      <img src="assets/img/dead-sea.jpg" alt="Dead Sea shoreline">
+      <img src="assets/img/dead-sea.jpg" alt="Dead Sea shoreline" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/vibrations-still.jpg"
        data-alt="Vibrations from Gaza — still"
        data-caption="Vibrations from Gaza (2024) · Short documentary (still)">
-      <img src="assets/img/vibrations-still.jpg" alt="Vibrations from Gaza — still">
+      <img src="assets/img/vibrations-still.jpg" alt="Vibrations from Gaza — still" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/we-the-wild-plants.jpg"
        data-alt="We, the Wild Plants and Fruit Trees"
        data-caption="We, the Wild Plants and Fruit Trees (2022– ) · Photograph / installation">
-      <img src="assets/img/we-the-wild-plants.jpg" alt="We, the Wild Plants and Fruit Trees">
+      <img src="assets/img/we-the-wild-plants.jpg" alt="We, the Wild Plants and Fruit Trees" loading="lazy">
     </a>
 
     <a class="tile" href="assets/img/gallery-wall.jpg"
        data-alt="Installation view — grid of photographs"
        data-caption="Invisible (2014) · Installation view">
-      <img src="assets/img/gallery-wall.jpg" alt="Installation view — grid of photographs">
+      <img src="assets/img/gallery-wall.jpg" alt="Installation view — grid of photographs" loading="lazy">
     </a>
   </section>
 
   <hr>
 
   <section class="note">
-    <p class="sub">For exhibitions, screenings, or press materials, see <a href="about.html">About</a>.</p>
+    <p class="sub">For project details, exhibitions history, and press inquiries, please visit the <a href="works.html">Projects</a> and <a href="about.html">About</a> pages.</p>
   </section>
 </main>
 
-<footer>© <span id="y"></span> Rehab Nazzal</footer>
+<footer>© <span id="y"></span> Rehab Nazzal. All rights reserved.</footer>
 
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
@@ -96,7 +106,8 @@
   <button class="lb-btn lb-next" aria-label="Next">›</button>
 </div>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="assets/site.js" defer></script>
+
 </body>
 </html>
