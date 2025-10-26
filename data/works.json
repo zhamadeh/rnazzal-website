@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "title": "Vibrations from Gaza",
+    "year": "2024",
+    "media": "Short documentary",
+    "cover": "assets/img/vibrations-01.jpg",
+    "alt": "Still from Vibrations from Gaza",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "Driving in Palestine",
+    "year": "2023",
+    "media": "Photography / Book",
+    "cover": "assets/img/driving-01.jpg",
+    "alt": "Cover or spread from Driving in Palestine",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "We, the Wild Plants and Fruit Trees",
+    "year": "2022",
+    "media": "Photography / Installation",
+    "cover": "assets/img/wild-plants-01.jpg",
+    "alt": "Installation view",
+    "credit": "© Rehab Nazzal"
+  }
+]
