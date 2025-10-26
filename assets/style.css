@@ -1,20 +1,20 @@
 /* 
- * Sophisticated Artist Portfolio
- * Dark, elegant design with beautiful typography
+ * Sophisticated Artist Portfolio - Light Theme
+ * Clean, elegant design with beautiful typography
  * Perfect for documentary photography and serious artistic work
  */
 
 :root {
-  /* Color Palette - Elegant Dark Theme */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #141414;
-  --bg-tertiary: #1e1e1e;
-  --text-primary: #f5f5f5;
-  --text-secondary: #a8a8a8;
-  --text-muted: #6b6b6b;
-  --accent: #ffffff;
-  --border: rgba(255, 255, 255, 0.08);
-  --hover: rgba(255, 255, 255, 0.03);
+  /* Color Palette - Elegant Light Theme */
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f5f5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #525252;
+  --text-muted: #8a8a8a;
+  --accent: #000000;
+  --border: rgba(0, 0, 0, 0.08);
+  --hover: rgba(0, 0, 0, 0.03);
   
   /* Spacing & Layout */
   --max-width: 1400px;
@@ -62,7 +62,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid var(--border);
 }
@@ -86,7 +86,7 @@ header {
 }
 
 .brand:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .spacer {
@@ -203,7 +203,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* ============================================
@@ -241,7 +241,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4/3;
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -250,7 +250,7 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -331,7 +331,8 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
 }
 
 figcaption {
@@ -410,7 +411,7 @@ footer {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +443,8 @@ footer {
   height: auto;
   width: auto;
   object-fit: contain;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
 }
 
 .lb-cap {
@@ -455,8 +457,8 @@ footer {
 
 .lb-btn {
   position: fixed;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border);
   color: var(--text-primary);
   width: 48px;
   height: 48px;
@@ -468,11 +470,12 @@ footer {
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .lb-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--bg-secondary);
+  border-color: var(--text-primary);
   transform: scale(1.05);
 }
 
@@ -507,12 +510,25 @@ footer {
   margin: 80px 0 40px 0;
   padding: 40px;
   background: var(--bg-secondary);
-  border-left: 2px solid var(--border);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--text-primary);
 }
 
 .note p {
   margin: 0;
   font-size: 15px;
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+
+blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 24px;
+  margin: 32px 0;
+  font-style: italic;
+  color: var(--text-secondary);
 }
 
 /* ============================================
@@ -648,5 +664,9 @@ a:focus-visible {
   
   a {
     text-decoration: underline;
+  }
+  
+  figure img {
+    border: none;
   }
 }
