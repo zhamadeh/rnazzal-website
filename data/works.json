@@ -1,26 +1,50 @@
 [
   {
-    "title": "Vibrations from Gaza",
-    "year": "2023",
-    "media": "Short documentary",
-    "cover": "assets/img/portrait-nazzal.png",
-    "alt": "Portrait of Rehab Nazzal",
-    "credit": "© Courtesy of the artist / Cinema Politica"
-  },
-  {
     "title": "Driving in Palestine",
     "year": "2023",
     "media": "Photography / Book",
-    "cover": "assets/img/driving-in-palestine.jpg",
+    "cover": "assets/img/driving-book.jpg",
     "alt": "Book cover: Driving in Palestine",
-    "credit": "© Fernwood Publishing / Columbia University Press"
+    "credit": "© Rehab Nazzal / Fernwood Publishing"
   },
   {
-    "title": "Lifta",
-    "year": "2022",
+    "title": "Driving in Palestine — Silhouette",
+    "year": "2010–2020",
     "media": "Photograph",
-    "cover": "assets/img/lifta-2022.jpg",
-    "alt": "Tree growing from ancient stone wall — Lifta",
-    "credit": "© Rehab Nazzal (via Galleries West)"
+    "cover": "assets/img/driving-silhouette.png",
+    "alt": "Silhouette of driver with checkpoint reflections",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "Area A Warning Sign",
+    "year": "2010–2020",
+    "media": "Photograph",
+    "cover": "assets/img/area-a-sign.png",
+    "alt": "Sign warning entry to Area A",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "Dead Sea Shoreline",
+    "year": "2010–2020",
+    "media": "Photograph",
+    "cover": "assets/img/dead-sea.jpg",
+    "alt": "Shoreline from above: sand and turquoise water",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "Ruined Building",
+    "year": "2010–2020",
+    "media": "Photograph",
+    "cover": "assets/img/ruined-building.jpg",
+    "alt": "Crumbling concrete structure in the Jordan Valley",
+    "credit": "© Rehab Nazzal"
+  },
+  {
+    "title": "Vibrations from Gaza",
+    "year": "2024",
+    "media": "Short documentary (still)",
+    "cover": "assets/img/vibrations-still.jpg",
+    "alt": "Child flexing arms on patterned couch",
+    "credit": "© Rehab Nazzal"
   }
 ]

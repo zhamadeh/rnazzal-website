@@ -1,9 +1,16 @@
 [
   {
-    "title": "Invisible",
-    "venue": "Karsh-Masson Gallery",
-    "city": "Ottawa",
-    "dates": "2014",
-    "poster": "assets/img/invisible-entrance.jpg"
+    "title": "Driving in Palestine (Installation View)",
+    "venue": "Gallery Installation",
+    "city": "",
+    "dates": "2023",
+    "poster": "assets/img/gallery-wall.jpg"
+  },
+  {
+    "title": "Artist Talk",
+    "venue": "Lecture / Screening",
+    "city": "",
+    "dates": "2024",
+    "poster": "assets/img/artist-talk.jpg"
   }
 ]
