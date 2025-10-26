@@ -3,25 +3,34 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Publications — Rehab Nazzal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <a class="brand" href="./"><span class="badge">RN</span> Rehab Nazzal</a>
-      <div class="spacer"></div>
-      <a href="works.html">Works</a><a href="exhibitions.html">Exhibitions</a>
-      <a href="publications.html" aria-current="page">Publications</a><a href="about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Publications</h1>
-    <div id="pubs-grid" class="grid"></div>
-  </main>
-  <footer class="footer">© <span id="y"></span> Rehab Nazzal</footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script src="assets/site.js" defer></script>
+<header>
+  <nav class="nav">
+    <a class="brand" href="./">Rehab Nazzal</a>
+    <div class="spacer"></div>
+    <a href="works.html">Projects</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="publications.html" aria-current="page">Publications</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Publications</h1>
+  <ul class="clean">
+    <li><strong>Driving in Palestine</strong> (Fernwood Publishing, 2023) — photographs, hand-drawn maps, and essays documenting movement and surveillance in the West Bank, 2010–2020.</li>
+  </ul>
+  <figure>
+    <img src="assets/img/driving-book.jpg" alt="Driving in Palestine book cover">
+    <figcaption>Book cover. © Rehab Nazzal.</figcaption>
+  </figure>
+</main>
+
+<footer>© <span id="y"></span> Rehab Nazzal</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>

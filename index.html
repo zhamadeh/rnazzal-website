@@ -11,9 +11,9 @@
 <body>
 <header>
   <nav class="nav">
-    <a class="brand" href="./"><span class="badge">RN</span> Rehab Nazzal</a>
+    <a class="brand" href="./">Rehab Nazzal</a>
     <div class="spacer"></div>
-    <a href="works.html">Works</a>
+    <a href="works.html">Projects</a>
     <a href="exhibitions.html">Exhibitions</a>
     <a href="publications.html">Publications</a>
     <a href="about.html">About</a>
@@ -21,40 +21,38 @@
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Rehab Nazzal</h1>
-      <p class="lead">Multidisciplinary artist working across video, photography, sound, and installation. Practice investigates the effects of settler-colonial violence on people, land, and non-human life.</p>
-    </div>
-    <figure class="hero-media">
-      <img src="assets/img/portrait-hero.jpg" alt="Rehab Nazzal">
-      <figcaption class="caption">© Courtesy of the artist</figcaption>
-    </figure>
+  <section class="section">
+    <h1>Rehab Nazzal</h1>
+    <p class="lead">Palestinian-born multidisciplinary artist working across video, photography, sound, and installation. Her practice examines the effects of settler-colonial violence on people, land, and non-human life, often through quiet, observational images and field recordings.</p>
   </section>
 
-  <h2>Featured Works</h2>
-  <div id="works-grid" class="grid"></div>
+  <figure>
+    <img src="assets/img/driving-silhouette.png" alt="Driving in Palestine — silhouette">
+    <figcaption>From the series <em>Driving in Palestine</em>. © Rehab Nazzal.</figcaption>
+  </figure>
+
+  <section class="section">
+    <h2>Current Focus</h2>
+    <ul class="clean">
+      <li><strong>Vibrations from Gaza</strong> — short documentary exploring how Deaf children experience bombardment through vibration and tremor rather than sound; an embodied account of place, fear, and resilience.</li>
+      <li><strong>Driving in Palestine</strong> — years-long photographic project and book documenting the politics of mobility, surveillance infrastructure, and everyday life along West Bank roads (2010–2020).</li>
+      <li><strong>We, the Wild Plants and Fruit Trees</strong> — images and fieldwork tracing non-human lives—wild flora, orchards and trees—within landscapes of dispossession.</li>
+    </ul>
+  </section>
 
   <hr>
 
-  <h2>Recent Exhibitions</h2>
-  <div id="exhibitions-grid" class="grid"></div>
+  <section class="section">
+    <h2>Selected Highlights</h2>
+    <ul class="clean">
+      <li><strong>Book:</strong> <em>Driving in Palestine</em> (Fernwood, 2023).</li>
+      <li><strong>Film:</strong> <em>Vibrations from Gaza</em> (2024) — screenings, talks, and community events.</li>
+      <li><strong>Exhibition:</strong> <em>Invisible</em> — multi-channel video and photographic installation addressing incarceration and surveillance.</li>
+    </ul>
+  </section>
 </main>
 
-<footer class="footer">© <span id="y"></span> Rehab Nazzal</footer>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
-  <button class="lb-close" aria-label="Close">×</button>
-  <button class="lb-prev" aria-label="Previous">‹</button>
-  <figure class="lb-figure">
-    <img id="lb-img" alt="">
-    <figcaption id="lb-cap" class="lb-cap"></figcaption>
-  </figure>
-  <button class="lb-next" aria-label="Next">›</button>
-</div>
-
+<footer>© <span id="y"></span> Rehab Nazzal</footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-<script src="assets/site.js" defer></script>
 </body>
 </html>

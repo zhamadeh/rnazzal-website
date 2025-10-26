@@ -1,28 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Exhibitions — Rehab Nazzal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <a class="brand" href="./"><span class="badge">RN</span> Rehab Nazzal</a>
-      <div class="spacer"></div>
-      <a href="works.html">Works</a><a href="exhibitions.html" aria-current="page">Exhibitions</a>
-      <a href="publications.html">Publications</a><a href="about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Exhibitions</h1>
-    <div id="exhibitions-grid" class="grid"></div>
-  </main>
-  <footer class="footer">© <span id="y"></span> Rehab Nazzal</footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script src="assets/site.js" defer></script>
+<header>
+  <nav class="nav">
+    <a class="brand" href="./">Rehab Nazzal</a>
+    <div class="spacer"></div>
+    <a href="works.html">Projects</a>
+    <a href="exhibitions.html" aria-current="page">Exhibitions</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Exhibitions</h1>
+  <ul class="clean">
+    <li><strong>Invisible</strong> — Karsh-Masson Gallery, Ottawa (2014)</li>
+    <li><strong>The Willful Plot</strong> — Morris and Helen Belkin Art Gallery, Vancouver (2023) — group</li>
+    <li><strong>Artist Talks & Screenings</strong> — universities, galleries, and community venues (ongoing)</li>
+  </ul>
+
+  <figure>
+    <img src="assets/img/artist-talk.jpg" alt="Artist talk screening">
+    <figcaption>Artist talk and screening. © Rehab Nazzal.</figcaption>
+  </figure>
+</main>
+
+<footer>© <span id="y"></span> Rehab Nazzal</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>

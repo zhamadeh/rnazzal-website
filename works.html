@@ -1,45 +1,78 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Works — Rehab Nazzal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Rehab Nazzal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <a class="brand" href="./"><span class="badge">RN</span> Rehab Nazzal</a>
-      <div class="spacer"></div>
-      <a href="works.html" aria-current="page">Works</a>
-      <a href="exhibitions.html">Exhibitions</a>
-      <a href="publications.html">Publications</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<header>
+  <nav class="nav">
+    <a class="brand" href="./">Rehab Nazzal</a>
+    <div class="spacer"></div>
+    <a href="works.html" aria-current="page">Projects</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-  <main>
-    <h1>Works</h1>
-    <p class="lead">Selected projects across moving-image, photography, sound and installation.</p>
-    <div id="works-grid" class="grid"></div>
-  </main>
+<main>
+  <h1>Projects</h1>
+  <p class="lead">A selection of ongoing and completed bodies of work.</p>
 
-  <footer class="footer">© <span id="y"></span> Rehab Nazzal</footer>
-
-  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
-    <button class="lb-close" aria-label="Close">×</button>
-    <button class="lb-prev" aria-label="Previous">‹</button>
-    <figure class="lb-figure">
-      <img id="lb-img" alt="">
-      <figcaption id="lb-cap" class="lb-cap"></figcaption>
+  <div class="section">
+    <h2>Vibrations from Gaza (2024)</h2>
+    <p>Short documentary that centres Deaf children in Gaza who perceive bombardment through vibration rather than sound. The work foregrounds touch, tremor, and the constant presence of drones to rethink how violence is sensed.</p>
+    <figure>
+      <img src="assets/img/vibrations-still.jpg" alt="Vibrations from Gaza still">
+      <figcaption>Film still. © Rehab Nazzal.</figcaption>
     </figure>
-    <button class="lb-next" aria-label="Next">›</button>
   </div>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script src="assets/site.js" defer></script>
+  <div class="section">
+    <h2>Driving in Palestine (2010–2020; book 2023)</h2>
+    <p>Long-form photographic study produced from inside moving vehicles across the West Bank. The series records checkpoints, watchtowers, walls, signage, and small gestures of daily life, assembling a road atlas of constraint and endurance.</p>
+    <figure>
+      <img src="assets/img/driving-book.jpg" alt="Driving in Palestine book cover">
+      <figcaption>Book cover (Fernwood Publishing). © Rehab Nazzal.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/area-a-sign.png" alt="Area A sign">
+      <figcaption>Area A warning sign on a roadside. © Rehab Nazzal.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/ruined-building.jpg" alt="Ruined building">
+      <figcaption>Roadside structure, Jordan Valley. © Rehab Nazzal.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/dead-sea.jpg" alt="Dead Sea shoreline">
+      <figcaption>Shoreline study, Dead Sea. © Rehab Nazzal.</figcaption>
+    </figure>
+  </div>
+
+  <div class="section">
+    <h2>We, the Wild Plants and Fruit Trees (2022– )</h2>
+    <p>Photographs and notes tracing the lives of wild flora and cultivated trees within militarized ecologies—botany as witness to land use, enclosure, and care.</p>
+    <figure>
+      <img src="assets/img/we-the-wild-plants.jpg" alt="We, the Wild Plants and Fruit Trees">
+      <figcaption>Field photograph. © Rehab Nazzal.</figcaption>
+    </figure>
+  </div>
+
+  <div class="section">
+    <h2>Invisible (2014)</h2>
+    <p>Video and photographic installation engaging with incarceration and political prisoners; hundreds of small images and several channels of video form a field of fragments and testimony.</p>
+    <figure>
+      <img src="assets/img/gallery-wall.jpg" alt="Installation view with grid of photographs">
+      <figcaption>Installation view. © Rehab Nazzal.</figcaption>
+    </figure>
+  </div>
+</main>
+
+<footer>© <span id="y"></span> Rehab Nazzal</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
