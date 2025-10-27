@@ -45,8 +45,15 @@ h1{font-size:4rem;font-weight:300;margin:0 0 8px;line-height:1.18;letter-spacing
 
 /* Trailer */
 .fullbleed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw; margin-top:56px}
-.fullbleed video{width:100%;height:44vh;object-fit:cover;object-position:center 12%;filter:brightness(.95)}
+.fullbleed video{width:100%;height:48vh;object-fit:cover;object-position:center 10%;filter:brightness(.95)}
 
 /* Footer */
 footer{border-top:1px solid var(--line); padding:22px 24px; color:#6b6f76; font-size:.95rem}
 footer .wrap{max-width:var(--max); margin:0 auto; text-align:center}
+
+.featured{margin:3.5rem 0 2rem}
+.featured img{margin:1rem 0;border-radius:6px}
+.grid{display:grid;gap:2rem}
+@media(min-width:900px){.grid{grid-template-columns:1.1fr 1fr}}
+.section{margin:3.5rem 0 1rem}
+        
