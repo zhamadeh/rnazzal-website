@@ -369,6 +369,38 @@
             }
         }
 
+        /* Exhibition List */
+        .exhibition-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .exhibition-item {
+            line-height: 1.7;
+        }
+
+        .exhibition-item p {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .exhibition-item p:first-child {
+            color: var(--text-primary);
+        }
+
+        .exhibition-item strong {
+            font-weight: 500;
+        }
+
+        /* Section h2 styling */
+        section h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -425,7 +457,11 @@
         <div class="container">
             <section class="hero">
                 <h1 id="mainTitle">Rehab Nazzal</h1>
-                <p class="subtitle">Multidisciplinary artist working with photography, video, sound, and installation to examine surveillance, mobility, vibration, and ecologies of care across Palestine.</p>
+                <p class="subtitle">Artist, educator, researcher</p>
+                
+                <div class="bio">
+                    <p>Palestinian-born multidisciplinary artist working with photography, video, sound, and installation to examine surveillance, mobility, vibration, and ecologies of care across Palestine. Work focuses on the effects of settler-colonial violence on bodies, minds, land, and non-human life through documentary approaches and immersive installations.</p>
+                </div>
                 
                 <div class="links">
                     <a href="mailto:renazzal@gmail.com">Email</a>
@@ -544,46 +580,55 @@
     <!-- Exhibitions Page -->
     <div id="exhibitionsPage" class="page">
         <div class="container">
+            <section class="hero">
+                <h1>Exhibitions</h1>
+                <p class="subtitle">Selected exhibitions, screenings, and public presentations.</p>
+            </section>
+
             <section class="section">
-                <div class="section-header">
-                    <div class="section-title">Shows & Screenings</div>
-                    <h2 class="section-subtitle">Exhibitions</h2>
+                <h2>Solo Exhibitions</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>Invisible</strong> — Karsh-Masson Gallery, Ottawa City Hall (2014)</p>
+                        <p>Multimedia installation featuring four videos and 1,700 photographs addressing incarceration, political prisoners, and extrajudicial killings.</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p><strong>Divide</strong> — Gallery 101, Ottawa (2010)</p>
+                        <p>Solo exhibition of photographs exploring separation and fragmentation in Palestinian territories.</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="items-list">
-                    <div class="item">
-                        <div class="item-meta">Solo Exhibition · 2014</div>
-                        <h3>Invisible</h3>
-                        <p>Karsh-Masson Gallery, Ottawa City Hall</p>
-                        <p class="additional-info">Multimedia installation featuring four videos and 1,700 photographs addressing incarceration, political prisoners, and extrajudicial killings.</p>
+            <section class="section">
+                <h2>Group Exhibitions</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>The Willful Plot</strong> — Morris and Helen Belkin Art Gallery, Vancouver (2023)</p>
+                        <p>Group exhibition exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. Featured <em>Canada Park</em> (2015) and <em>We, the Wild Plants and Fruit Trees</em> (2022).</p>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Group Exhibition · 2023</div>
-                        <h3>The Willful Plot</h3>
-                        <p>Morris and Helen Belkin Art Gallery, Vancouver</p>
-                        <p class="additional-info">Group exhibition exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. Featured Canada Park (2015) and We, the Wild Plants and Fruit Trees (2022).</p>
+                    <div class="exhibition-item">
+                        <p><strong>Driving in Palestine</strong> — Montréal, arts interculturels (MAI) (September–October 2023)</p>
+                        <p>Installation with photographs, video, sound, and printed matter.</p>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Installation · 2023</div>
-                        <h3>Driving in Palestine</h3>
-                        <p>MontrÃ©al, arts interculturels (MAI)</p>
-                        <p class="additional-info">Installation with photographs, video, sound, and printed matter.</p>
+                    <div class="exhibition-item">
+                        <p><strong>On Borrowed Time in Gaza: Art in Confinement</strong> — Monica Reyes Gallery (2021)</p>
+                        <p>Fundraiser/solidarity exhibition featuring ~200 works by artists in Gaza; proceeds supported artists and art-therapy programs.</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Group Exhibition · 2021</div>
-                        <h3>On Borrowed Time in Gaza: Art in Confinement</h3>
-                        <p>Monica Reyes Gallery</p>
-                        <p class="additional-info">Fundraiser/solidarity exhibition featuring ~200 works by artists in Gaza; proceeds supported artists and art-therapy programs.</p>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-meta">Solo Exhibition · 2010</div>
-                        <h3>Divide</h3>
-                        <p>Gallery 101, Ottawa</p>
-                        <p class="additional-info">Solo exhibition of photographs exploring separation and fragmentation in Palestinian territories.</p>
+            <section class="section">
+                <h2>Film Festivals & Screenings</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p>International Yellowknife Film Festival</p>
+                        <p>Montreal Palestine Film Festival</p>
+                        <p>SAW Video for the Media Arts</p>
+                        <p>International Mini Print Festival</p>
+                        <p>Ottawa X-photography Festival</p>
                     </div>
                 </div>
             </section>
@@ -593,33 +638,39 @@
     <!-- Publications Page -->
     <div id="publicationsPage" class="page">
         <div class="container">
-            <section class="section">
-                <div class="section-header">
-                    <div class="section-title">Writing & Press</div>
-                    <h2 class="section-subtitle">Publications</h2>
-                </div>
+            <section class="hero">
+                <h1>Publications</h1>
+                <p class="subtitle">Books, essays, and critical writing.</p>
+            </section>
 
-                <div class="items-list">
-                    <div class="item">
-                        <div class="item-meta">Book · 2023</div>
-                        <h3>Driving in Palestine / Ø§Ù„ØªØ­Ø±Ù'Ùƒ ÙÙŠ ÙÙ„Ø³Ø·ÙŠÙ†</h3>
-                        <p>Fernwood Publishing, 2023</p>
-                        <p class="additional-info">A research-creation project featuring 160 black and white photographs taken from moving vehicles across the West Bank (2010–2020), hand-drawn maps, and critical essays in English and Arabic by Palestinian and Canadian scholars and artists. Contributors include Mohammed El-Kurd and other Palestinian intellectuals, writers, and activists.</p>
+            <section class="section">
+                <h2>Books</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>Driving in Palestine / التحرّك في فلسطين</strong> — Fernwood Publishing (2023)</p>
+                        <p>A research-creation project featuring 160 black and white photographs taken from moving vehicles across the West Bank (2010–2020), hand-drawn maps, and critical essays in English and Arabic by Palestinian and Canadian scholars and artists. Contributors include Mohammed El-Kurd and other Palestinian intellectuals, writers, and activists.</p>
                         <div class="project-media">
                             <img src="assets/img/driving-book-cover.jpg" alt="Driving in Palestine book">
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Interview · CBC Arts · 2023</div>
-                        <h3>"Behind the lens: An artist under military occupation"</h3>
+            <section class="section">
+                <h2>Press & Interviews</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>"Behind the lens: An artist under military occupation"</strong> — CBC Arts (December 2023)</p>
                         <p>Extended interview discussing documentary practice, political art, and life in the West Bank during crisis.</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Academic Writing</div>
-                        <h3>Research & Scholarship</h3>
-                        <p class="additional-info">As a scholar with a PhD in Art and Visual Culture, Dr. Nazzal's research examines the intersection of documentary practice, settler-colonial violence, and embodied experience. Her academic work has been published in journals and anthologies addressing visual culture, Palestinian studies, and critical art theory.</p>
+            <section class="section">
+                <h2>Academic Writing</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p>As a scholar with a PhD in Art and Visual Culture, Dr. Nazzal's research examines the intersection of documentary practice, settler-colonial violence, and embodied experience. Her academic work has been published in journals and anthologies addressing visual culture, Palestinian studies, and critical art theory.</p>
                     </div>
                 </div>
             </section>
@@ -629,52 +680,60 @@
     <!-- About Page -->
     <div id="aboutPage" class="page">
         <div class="container">
+            <section class="hero">
+                <h1>About</h1>
+                <p class="subtitle">Palestinian-born multidisciplinary artist based between Montréal and Bethlehem.</p>
+            </section>
+
             <section class="section">
-                <div class="section-header">
-                    <div class="section-title">Biography</div>
-                    <h2 class="section-subtitle">About</h2>
+                <div class="bio">
+                    <p>Rehab Nazzal is a Palestinian-born multidisciplinary artist whose work examines mobility, vibration, incarceration, and ecologies of care in Palestine. Working across photography, video, sound, and installation, she explores how structures of control shape sensing and everyday movement.</p>
+                    
+                    <p>Her practice centers on the effects of settler-colonial violence on the bodies and minds of colonized peoples, on the land, and on other non-human life. Through documentary approaches and immersive installations, she creates spaces for witnessing and understanding Palestinian experience.</p>
+                    
+                    <p>Nazzal's work has been exhibited internationally at institutions including the Morris and Helen Belkin Art Gallery, Karsh-Masson Gallery, Gallery 101, and numerous film festivals and art venues. In 2014, her exhibition <em>Invisible</em> at Ottawa City Hall sparked significant public discourse when it was condemned by Israel's ambassador to Canada.</p>
+                    
+                    <p>In December 2015, while photographing a military raid in occupied Palestine, Nazzal was shot in the leg by an Israeli sniper—a stark reminder of the risks faced by those documenting occupation.</p>
                 </div>
+            </section>
 
-                <div class="items-list">
-                    <div class="item">
-                        <p>Rehab Nazzal is a Palestinian-born multidisciplinary artist whose work examines mobility, vibration, incarceration, and ecologies of care in Palestine.</p>
-                        
-                        <p>Working across photography, video, sound, and installation, she explores how structures of control shape sensing and everyday movement. Born in Jenin in the occupied West Bank, Nazzal is currently based between MontrÃ©al and Bethlehem.</p>
-                        
-                        <p>Her practice centers on the effects of settler-colonial violence on the bodies and minds of colonized peoples, on the land, and on other non-human life. Through documentary approaches and immersive installations, she creates spaces for witnessing and understanding Palestinian experience.</p>
-                        
-                        <p>Nazzal's work has been exhibited internationally at institutions including the Morris and Helen Belkin Art Gallery, Karsh-Masson Gallery, Gallery 101, and numerous film festivals and art venues. In 2014, her exhibition <em>Invisible</em> at Ottawa City Hall sparked significant public discourse when it was condemned by Israel's ambassador to Canada.</p>
-                        
-                        <p>In December 2015, while photographing a military raid in occupied Palestine, Nazzal was shot in the leg by an Israeli sniper—a stark reminder of the risks faced by those documenting occupation.</p>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-meta">Education</div>
-                        <h3>Academic Background</h3>
+            <section class="section">
+                <h2>Education</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
                         <p><strong>PhD</strong> in Art and Visual Culture — University of Western Ontario, Canada</p>
                         <p><strong>MFA</strong> — Toronto Metropolitan University (formerly Ryerson University)</p>
                         <p><strong>BFA</strong> — University of Ottawa</p>
                         <p><strong>BA</strong> in Economics — Damascus University, Syria</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Recognition</div>
-                        <h3>Awards & Honors</h3>
+            <section class="section">
+                <h2>Awards & Recognition</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
                         <p>Social Sciences and Humanities Research Council (SSHRC) Doctoral Award</p>
                         <p>Documentary Photography for Social Justice Award — Toronto Metropolitan University</p>
                         <p>Edmund and Isobel Ryan Visual Arts Award in Photography — University of Ottawa</p>
                         <p>Ontario Graduate Scholarship</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Teaching</div>
-                        <h3>Academic Positions</h3>
+            <section class="section">
+                <h2>Teaching & Research</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
                         <p>Dr. Nazzal has taught at Dar Al-Kalima University in Bethlehem, Simon Fraser University, Western University, and Ottawa School of Art. She is currently a Postdoctoral Fellow at Concordia University.</p>
                     </div>
+                </div>
+            </section>
 
-                    <div class="item">
-                        <div class="item-meta">Contact</div>
-                        <h3>Get in Touch</h3>
+            <section class="section">
+                <h2>Contact</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
                         <p>For exhibition inquiries, press materials, or other professional matters:</p>
                         <p>Email: <a href="mailto:renazzal@gmail.com">renazzal@gmail.com</a></p>
                         <p>Gallery: <a href="https://www.monicareyesgallery.com/rehab-nazzal.html" target="_blank">Monica Reyes Gallery</a></p>
