@@ -4,22 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rehab Nazzal — Artist & Photographer</title>
-  
-  <!-- Fonts: Inter for UI, Crimson Pro for elegant serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  
-  <meta name="description" content="Rehab Nazzal is a Palestinian-born multidisciplinary artist working with photography, video, sound, and installation to examine settler-colonial violence and Palestinian life.">
-  <meta name="author" content="Rehab Nazzal">
+  <meta name="description" content="Rehab Nazzal is a Palestinian-born multidisciplinary artist working with photography, video, sound, and installation.">
 </head>
 <body>
-
 <header>
   <nav class="nav">
-    <a class="brand" href="./">Rehab Nazzal</a>
+    <a class="brand" href="./" aria-current="page">Rehab Nazzal</a>
     <div class="spacer"></div>
     <a href="works.html">Projects</a>
     <a href="exhibitions.html">Exhibitions</a>
@@ -32,82 +26,48 @@
   <section class="hero">
     <div class="kicker">Multidisciplinary Artist</div>
     <h1>Documenting life, movement, and resistance across Palestine</h1>
-    <p class="sub">Working with photography, video, sound, and installation to examine the effects of settler-colonial violence on people, land, and ecology.</p>
+    <p class="sub">Photography, video, sound, and installation exploring how surveillance, mobility, and ecology shape everyday experience.</p>
   </section>
 
-  <section id="works" class="gallery">
-    <!-- Each tile: href = large image; data-alt + data-caption power the lightbox -->
-    <a class="tile" href="assets/img/driving-silhouette.png"
-       data-alt="Driving in Palestine — silhouette"
-       data-caption="Driving in Palestine (2010–2020) · Photograph">
-      <img src="assets/img/driving-silhouette.png" alt="Driving in Palestine — silhouette" loading="lazy">
-    </a>
+  <section class="video-hero" aria-label="Vibrations from Gaza trailer">
+    <video src="assets/img/vibrations_from_gaza_trailer_best.mp4" autoplay muted loop playsinline poster="assets/img/vibrations-in-gaza-still.jpg"></video>
+  </section>
+  <div class="video-caption small">Trailer — <em>Vibrations from Gaza</em> (2024)</div>
 
-    <a class="tile" href="assets/img/driving-book.jpg"
-       data-alt="Driving in Palestine book cover"
-       data-caption="Driving in Palestine (2023) · Book · Fernwood Publishing">
-      <img src="assets/img/driving-book.jpg" alt="Driving in Palestine book cover" loading="lazy">
+  <section class="gallery" aria-label="Highlights">
+    <a class="tile" href="assets/img/vibrations-in-gaza-still.jpg" data-alt="Vibrations from Gaza — still" data-caption="Vibrations from Gaza (2024) · Short documentary (still)">
+      <img src="assets/img/vibrations-in-gaza-still.jpg" alt="Vibrations from Gaza — still" loading="lazy">
     </a>
-
-    <a class="tile" href="assets/img/area-a-sign.png"
-       data-alt="Area A roadside sign"
-       data-caption="Area A (West Bank) · Photograph">
-      <img src="assets/img/area-a-sign.png" alt="Area A roadside sign" loading="lazy">
+    <a class="tile" href="assets/img/driving-in-palestine-1.png" data-alt="Driving in Palestine — roadside view" data-caption="Driving in Palestine (2010–2020) · Photograph">
+      <img src="assets/img/driving-in-palestine-1.png" alt="Driving in Palestine — roadside view" loading="lazy">
     </a>
-
-    <a class="tile" href="assets/img/ruined-building.jpg"
-       data-alt="Ruined building, Jordan Valley"
-       data-caption="Jordan Valley · Photograph">
-      <img src="assets/img/ruined-building.jpg" alt="Ruined building, Jordan Valley" loading="lazy">
+    <a class="tile" href="assets/img/dead-sea06.jpg" data-alt="Dead Sea shoreline study" data-caption="Dead Sea Study · Photograph">
+      <img src="assets/img/dead-sea06.jpg" alt="Dead Sea shoreline study" loading="lazy">
     </a>
-
-    <a class="tile" href="assets/img/dead-sea.jpg"
-       data-alt="Dead Sea shoreline"
-       data-caption="Dead Sea shoreline · Photograph">
-      <img src="assets/img/dead-sea.jpg" alt="Dead Sea shoreline" loading="lazy">
-    </a>
-
-    <a class="tile" href="assets/img/vibrations-still.jpg"
-       data-alt="Vibrations from Gaza — still"
-       data-caption="Vibrations from Gaza (2024) · Short documentary (still)">
-      <img src="assets/img/vibrations-still.jpg" alt="Vibrations from Gaza — still" loading="lazy">
-    </a>
-
-    <a class="tile" href="assets/img/we-the-wild-plants.jpg"
-       data-alt="We, the Wild Plants and Fruit Trees"
-       data-caption="We, the Wild Plants and Fruit Trees (2022– ) · Photograph / installation">
-      <img src="assets/img/we-the-wild-plants.jpg" alt="We, the Wild Plants and Fruit Trees" loading="lazy">
-    </a>
-
-    <a class="tile" href="assets/img/gallery-wall.jpg"
-       data-alt="Installation view — grid of photographs"
-       data-caption="Invisible (2014) · Installation view">
-      <img src="assets/img/gallery-wall.jpg" alt="Installation view — grid of photographs" loading="lazy">
+    <a class="tile" href="assets/img/We%2C%20the%20Wild%20Plants%20and%20Fruit%20Trees.jpg" data-alt="We, the Wild Plants and Fruit Trees" data-caption="We, the Wild Plants and Fruit Trees (2022– )">
+      <img src="assets/img/We%2C%20the%20Wild%20Plants%20and%20Fruit%20Trees.jpg" alt="We, the Wild Plants and Fruit Trees" loading="lazy">
     </a>
   </section>
 
   <hr>
 
   <section class="note">
-    <p class="sub">For project details, exhibitions history, and press inquiries, please visit the <a href="works.html">Projects</a> and <a href="about.html">About</a> pages.</p>
+    <p class="sub">See <a href="works.html">Projects</a> for detailed descriptions, and <a href="about.html">About</a> for biography and contact.</p>
   </section>
 </main>
 
-<footer>© <span id="y"></span> Rehab Nazzal. All rights reserved.</footer>
+<footer>© <span id="y"></span> Rehab Nazzal. All rights reserved. · Built by <a href="https://zeidhamadeh.com" target="_blank" rel="noopener">Zeid Hamadeh</a></footer>
 
 <!-- Lightbox -->
-<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lb-btn lb-close" aria-label="Close">×</button>
-  <button class="lb-btn lb-prev" aria-label="Previous">‹</button>
-  <figure class="lb-figure">
+<div id="lightbox" class="lb-hidden" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" aria-label="Close">Close</button>
+  <figure class="figure">
     <img id="lb-img" alt="">
-    <figcaption id="lb-cap" class="lb-cap"></figcaption>
+    <figcaption id="lb-cap" class="small"></figcaption>
   </figure>
-  <button class="lb-btn lb-next" aria-label="Next">›</button>
 </div>
 
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 <script src="assets/site.js" defer></script>
-
 </body>
 </html>
