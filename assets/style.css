@@ -57,10 +57,3 @@ footer .wrap{max-width:var(--max); margin:0 auto; text-align:center}
 @media(min-width:900px){.grid{grid-template-columns:1.1fr 1fr}}
 .section{margin:3.5rem 0 1rem}
         
-.work-row{display:grid;gap:2rem;align-items:center;padding:2.5rem 0;border-bottom:1px solid #e6e6e6}
-.work-row:last-child{border-bottom:0}
-@media(min-width:980px){.work-row{grid-template-columns:1.2fr 1fr}}
-.work-row img{border-radius:8px}
-.kicker{color:#a3a3a3;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:48px 0 8px}
-.h2-like{font-size:2.25rem;font-weight:500;letter-spacing:-0.02em;margin:0 0 .5rem}
-.body{color:#6b6f76}
