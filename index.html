@@ -9,7 +9,7 @@
 </head>
 <body>
   <nav class="nav">
-    <a class="brand" href="./" aria-current="page">Rehab Nazzal</a>
+    <div class="brand">Rehab Nazzal</div>
     <div class="spacer"></div>
     <a href="works.html">Projects</a>
     <a href="exhibitions.html">Exhibitions</a>
@@ -17,30 +17,51 @@
     <a href="about.html">About</a>
   </nav>
 
-  <!-- Full-bleed trailer -->
-  <div class="fullbleed">
+  <!-- Full-bleed trailer (cropped to hide subtitles) -->
+  <div class="fullbleed" aria-label="Vibrations from Gaza trailer">
     <video src="assets/img/vibrations_from_gaza_trailer_best.mp4" autoplay muted loop playsinline poster="assets/img/vibrations-in-gaza-still.jpg"></video>
   </div>
 
   <div class="wrapper">
-    <section class="hero">
-      <h1>Rehab Nazzal</h1>
-      <p class="lead">Photography, video, sound, and installation exploring surveillance, mobility, ecology, and resistance across Palestine.</p>
-    </section>
+    <header class="hero">
+      <h1 id="site-title">Rehab Nazzal</h1>
+      <p class="bio">Multidisciplinary artist working with photography, video, sound, and installation to examine surveillance, mobility, vibration, and ecologies of care across Palestine.</p>
+      <p class="small">Contact: <a href="mailto:renazzal@gmail.com">renazzal@gmail.com</a></p>
+    </header>
 
     <section>
-      <h2>Highlights</h2>
-      <div class="gallery">
-        <a class="tile" href="works.html#vibrations"><img src="assets/img/vibrations-in-gaza-still.jpg" alt="Vibrations from Gaza — still"></a>
-        <a class="tile" href="works.html#driving"><img src="assets/img/driving-in-palestine-1.png" alt="Driving in Palestine — photograph"></a>
-        <a class="tile" href="works.html#dead-sea"><img src="assets/img/dead-sea06.jpg" alt="Dead Sea Study — shoreline"></a>
-        <a class="tile" href="works.html#wild-plants"><img src="assets/img/We%2C%20the%20Wild%20Plants%20and%20Fruit%20Trees.jpg" alt="We, the Wild Plants and Fruit Trees — field image"></a>
+      <h2>Recent Projects</h2>
+      <div class="list">
+        <div class="item">
+          <a href="works.html#vibrations">
+            <h3>Vibrations from Gaza (2024)</h3>
+            <p>Short documentary centring Deaf children in Gaza who sense bombardment through vibration rather than sound.</p>
+          </a>
+        </div>
+        <div class="item">
+          <a href="works.html#driving">
+            <h3>Driving in Palestine (2010–2020; book 2023)</h3>
+            <p>Black‑and‑white photographs from moving vehicles—an atlas of constraint, surveillance, and everyday life.</p>
+          </a>
+        </div>
+        <div class="item">
+          <a href="works.html#dead-sea">
+            <h3>Dead Sea Study</h3>
+            <p>Shoreline studies tracing extraction, subsidence, and environmental transformation.</p>
+          </a>
+        </div>
+        <div class="item">
+          <a href="works.html#wild-plants">
+            <h3>We, the Wild Plants and Fruit Trees (2022– )</h3>
+            <p>Photographs and notes following wild flora and cultivated trees as witnesses to enclosure and care.</p>
+          </a>
+        </div>
       </div>
-      <p class="small caption">Browse the full project catalog on the <a href="works.html">Projects</a> page.</p>
     </section>
   </div>
 
-  <footer>© <span id="y"></span> Rehab Nazzal · Built by <a href="https://zeidhamadeh.com" target="_blank" rel="noopener">Zeid Hamadeh</a></footer>
+  <footer class="wrapper small">© <span id="y"></span> Rehab Nazzal · Built by <a href="https://zeidhamadeh.com" target="_blank" rel="noopener">Zeid Hamadeh</a></footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
