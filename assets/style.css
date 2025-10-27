@@ -1,40 +1,98 @@
-
-:root{
-  --bg:#fff;
-  --ink:#0a0a0a;
-  --muted:#6b7280;
-  --line:#e5e7eb;
-  --max:980px;
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #6b6f76;
+  --line: #e7e7e7;
+  --max: 760px;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif}
-img,video{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-a:hover{text-decoration:underline}
-hr{border:0;border-top:1px solid var(--line);margin:22px 0}
-.wrapper{max-width:var(--max);margin:0 auto;padding:34px 20px}
-h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:.2em 0}
-h2{font-size:clamp(22px,3.4vw,28px);margin:1.6rem 0 .6rem}
-h3{font-size:18px;margin:1rem 0 .2rem}
-.lead{color:var(--muted)}
-.small{font-size:.95rem;color:var(--muted)}
 
-.nav{position:sticky;top:0;z-index:10;display:flex;gap:18px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line);background:#ffffffee;backdrop-filter:saturate(120%) blur(6px)}
-.brand{font-weight:600;letter-spacing:.2px;opacity:0;transition:opacity .18s ease}
-.brand.show{opacity:1;color:#000}
-.spacer{flex:1}
-.nav a{color:#111;opacity:.8}
-.nav a[aria-current="page"]{opacity:1}
+* { box-sizing: border-box; }
 
-.bio{max-width:780px}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.60;
+  letter-spacing: -0.003em;
+}
 
-.list{display:grid;gap:18px}
-.item{padding:10px 0;border-bottom:1px solid var(--line)}
-.item:last-child{border-bottom:0}
-.item a{display:block}
-.item h3{margin:0 0 2px}
-.item p{margin:0;color:var(--muted)}
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-.fullbleed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw}
-/* Trim height & crop bottom to omit subs; tweak object-position if needed */
-.fullbleed video{width:100%;height:42vh;object-fit:cover;object-position:center 20%}
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line);
+  background: #ffffffd9;
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.brand.show { opacity: 1; }
+
+.spacer { flex: 1; }
+
+.nav a { font-size: 15px; margin-left: 26px; opacity: .8; }
+.nav a:hover, .nav a[aria-current="page"] { opacity: 1; }
+
+.wrapper {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 36px 24px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 36px 0 12px;
+  font-weight: 600;
+}
+
+.item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 1px;
+}
+
+.small, .lead { color: var(--muted); }
+
+.item p { margin: 0; color: var(--muted); }
+
+.list { display: grid; gap: 22px; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0; }
+
+/* Full-bleed trimmed trailer */
+.fullbleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.fullbleed video {
+  width: 100%;
+  height: 30vh; /* reduced from 42vh */
+  object-fit: cover;
+  object-position: center 15%; /* raises frame to hide subtitles */
+  filter: brightness(0.82); /* softens visual weight */
+}
