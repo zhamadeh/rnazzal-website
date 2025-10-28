@@ -181,26 +181,10 @@
             font-size: 0.9rem;
             font-weight: 400;
             transition: color 0.2s ease;
-            position: relative;
-        }
-
-        .links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--text-primary);
-            transition: width 0.2s ease;
         }
 
         .links a:hover {
             color: var(--text-primary);
-        }
-
-        .links a:hover::after {
-            width: 100%;
         }
 
         /* Section */
@@ -422,6 +406,8 @@
 
         .project-image {
             width: 100%;
+            height: 280px;
+            object-fit: cover;
             border-radius: 4px;
             border: 1px solid var(--border);
         }
@@ -494,7 +480,7 @@
         <div class="container">
             <section class="hero">
                 <h1 id="mainTitle">Rehab Nazzal</h1>
-                <p class="subtitle">Artist, educator, researcher</p>
+                <p class="subtitle">PhD, MFA · Artist, educator, researcher</p>
                 
                 <div class="bio">
                     <p>Palestinian-born multidisciplinary artist working with photography, video, sound, and installation to examine surveillance, mobility, vibration, and ecologies of care across Palestine. Work focuses on the effects of settler-colonial violence on bodies, minds, land, and non-human life through documentary approaches and immersive installations.</p>
@@ -518,8 +504,7 @@
                         <div>
                             <div class="item-meta">Film · 2024 · Award-Winning</div>
                             <h3><a href="#" onclick="showPage('projects'); return false;">Vibrations from Gaza</a></h3>
-                            <p>A short documentary created with Deaf children and families in Gaza. Rather than audible explosions, the work centres vibration as a primary sense—how war registers through the body when sound is inaccessible or unsafe.</p>
-                            <p class="additional-info">Winner of Best Short Film at the 2024 BFI London Film Festival and Prix Iris for Best Short Documentary at the 26th Quebec Cinema Awards. The jury praised the film for using "sound to send reverberations through our bodies and souls," demanding presence and deep reflection on growing up deaf in Gaza.</p>
+                            <p>A short documentary created with Deaf children and families in Gaza. Rather than audible explosions, the work centres vibration as a primary sense—how war registers through the body when sound is inaccessible or unsafe. Winner of Best Short Film at the 2024 BFI London Film Festival.</p>
                         </div>
                         <div>
                             <img src="assets/img/vibrations-in-gaza-film-cover.png" alt="Vibrations from Gaza film cover" class="project-image">
@@ -530,8 +515,7 @@
                         <div>
                             <div class="item-meta">Photography · Book · 2010–2023</div>
                             <h3><a href="#" onclick="showPage('projects'); return false;">Driving in Palestine</a></h3>
-                            <p>Photographs from moving vehicles trace watchtowers, walls, and checkpoints in the West Bank—mapping architectures of control alongside everyday movement. Published by Fernwood Publishing with essays in English and Arabic.</p>
-                            <p class="additional-info">Features 160 black and white photographs with hand-drawn maps and critical essays by Palestinian and Canadian scholars and artists, including Mohammed El-Kurd. The book documents the politics of surveillance and mobility from 2010 to 2020.</p>
+                            <p>Photographs from moving vehicles trace watchtowers, walls, and checkpoints in the West Bank—mapping architectures of control alongside everyday movement. Published by Fernwood Publishing with 160 black and white photographs, hand-drawn maps, and critical essays by Palestinian and Canadian scholars.</p>
                         </div>
                         <div>
                             <img src="assets/img/driving-book-cover.jpg" alt="Driving in Palestine book cover" class="project-image">
@@ -542,8 +526,7 @@
                         <div>
                             <div class="item-meta">Photography · Ongoing · 2022–</div>
                             <h3><a href="#" onclick="showPage('projects'); return false;">We, the Wild Plants and Fruit Trees</a></h3>
-                            <p>Photographs and field notes following wild flora and cultivated trees as living records of enclosure and care.</p>
-                            <p class="additional-info">Featured in The Willful Plot exhibition at the Morris and Helen Belkin Art Gallery (2023), exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. The work gives agency to wild plants growing through ruined Palestinian villages.</p>
+                            <p>Photographs and field notes following wild flora and cultivated trees as living records of enclosure and care. Featured in The Willful Plot exhibition at the Morris and Helen Belkin Art Gallery, exploring how plants bear witness to displacement and become living archives of cultural memory.</p>
                         </div>
                         <div>
                             <img src="assets/img/We, the Wild Plants and Fruit Trees.jpg" alt="We, the Wild Plants and Fruit Trees" class="project-image">
@@ -568,8 +551,7 @@
                         <div>
                             <div class="item-meta">Film · 2024 · 16 minutes</div>
                             <h3>Vibrations from Gaza</h3>
-                            <p>A short documentary that centers Deaf children in Gaza who perceive bombardment through vibration rather than sound. The work foregrounds touch, tremor, and the constant presence of drones to rethink how violence is sensed and experienced.</p>
-                            <p class="additional-info">Winner of Best Short Film at the 2024 BFI London Film Festival, Prix Iris for Best Short Documentary at the 26th Quebec Cinema Awards, Cinema Politica Audience Choice Award, Best Short at Iran International Film Festival, and Azur Phoenix Award at the Middle East and South Africa Film Festival. Born and raised under the 17-year-long siege and frequent Israeli military assaults, children Amani, Musa, Israa and others provide vivid accounts of their experiences of bombardment through sensing vibrations in the air, tremors in the ground, and echoes of collapsing buildings.</p>
+                            <p>A short documentary that centers Deaf children in Gaza who perceive bombardment through vibration rather than sound. Born and raised under the 17-year-long siege and frequent Israeli military assaults, children Amani, Musa, Israa and others provide vivid accounts of their experiences through sensing vibrations in the air, tremors in the ground, and echoes of collapsing buildings. Winner of Best Short Film at the 2024 BFI London Film Festival, Prix Iris for Best Short Documentary, and Cinema Politica Audience Choice Award.</p>
                         </div>
                         <div>
                             <img src="assets/img/vibrations-in-gaza-still.jpg" alt="Vibrations from Gaza still" class="project-image">
@@ -580,8 +562,7 @@
                         <div>
                             <div class="item-meta">Photography · Book · 2010–2023</div>
                             <h3>Driving in Palestine</h3>
-                            <p>A decade-long photographic study produced from inside moving vehicles across the West Bank. The series records checkpoints, watchtowers, walls, signage, and small gestures of daily life, assembling a road atlas of constraint and endurance.</p>
-                            <p class="additional-info">Published by Fernwood Publishing in 2023, featuring 160 black and white photographs with hand-drawn maps and critical essays in English and Arabic by Palestinian and Canadian scholars and artists including Mohammed El-Kurd. The book explores how fragmentation and coded areas control Palestinian movement while privileging Jewish settlers. Exhibited at MAI Montréal (2023) as a multimedia installation with photographs, video, sound, and printed matter.</p>
+                            <p>A decade-long photographic study produced from inside moving vehicles across the West Bank. The series records checkpoints, watchtowers, walls, signage, and small gestures of daily life, assembling a road atlas of constraint and endurance. Published by Fernwood Publishing in 2023, featuring 160 black and white photographs with hand-drawn maps and critical essays in English and Arabic by Palestinian and Canadian scholars including Mohammed El-Kurd.</p>
                         </div>
                         <div>
                             <img src="assets/img/driving-in-palestine-1.png" alt="Driving in Palestine" class="project-image">
@@ -592,8 +573,7 @@
                         <div>
                             <div class="item-meta">Photography · Installation · Ongoing · 2022–</div>
                             <h3>We, the Wild Plants and Fruit Trees</h3>
-                            <p>An ongoing series of photographs and notes tracing the lives of wild flora and cultivated trees within militarized ecologies. Through images of fig, olive, pomegranate, cactus, za'atar, and other plants, the project explores how plants bear witness to land use, enclosure, displacement, and care.</p>
-                            <p class="additional-info">Featured in The Willful Plot at the Morris and Helen Belkin Art Gallery (January–April 2023), alongside Canada Park (2015). The exhibition explored gardens as sites of tension between wild and cultivated, sovereign and colonized. These plants persist despite attempts to erase Palestinian presence from the land, becoming living archives of cultural and ecological knowledge.</p>
+                            <p>An ongoing series of photographs and notes tracing the lives of wild flora and cultivated trees within militarized ecologies. Through images of fig, olive, pomegranate, cactus, za'atar, and other plants, the project explores how plants bear witness to land use, enclosure, displacement, and care. Featured in The Willful Plot at the Morris and Helen Belkin Art Gallery, the work explores botany as a form of memory and resistance.</p>
                         </div>
                         <div>
                             <img src="assets/img/We, the Wild Plants and Fruit Trees-1.jpeg" alt="Wild Plants" class="project-image">
@@ -604,7 +584,7 @@
                         <div>
                             <div class="item-meta">Photography · Environmental</div>
                             <h3>Dead Sea Study</h3>
-                            <p>Shoreline studies at the Dead Sea examining extraction, subsidence, and environmental transformation. The work documents the dramatic changes to the landscape caused by mineral extraction and water diversion.</p>
+                            <p>Shoreline studies at the Dead Sea examining extraction, subsidence, and environmental transformation. The work documents the dramatic changes to the landscape caused by mineral extraction and water diversion, tracing the visible marks of environmental crisis.</p>
                         </div>
                         <div>
                             <img src="assets/img/dead-sea06.jpg" alt="Dead Sea Study" class="project-image">
@@ -615,8 +595,7 @@
                         <div>
                             <div class="item-meta">Installation · 2014</div>
                             <h3>Invisible</h3>
-                            <p>A multimedia installation engaging with incarceration and political prisoners, featuring four videos and 1,700 photographs. One video, <em>Bil'in</em>, documented the artist's experience in the village where Palestinians and international solidarity activists were physically attacked by Israeli forces during weekly protests against land confiscation.</p>
-                            <p class="additional-info">Exhibited at Karsh-Masson Gallery in Ottawa City Hall (2014), the installation was publicly condemned by Israel's ambassador to Canada, Rafael Barak, sparking significant public discourse about censorship and Palestinian art. Another video, <em>Target</em>, consisted of over 127 rapidly flashing images of Palestinians who were extrajudicially assassinated, including the artist's own brother, killed in Athens in 1986 at age 38.</p>
+                            <p>A multimedia installation engaging with incarceration and political prisoners, featuring four videos and 1,700 photographs. Exhibited at Karsh-Masson Gallery in Ottawa City Hall, the installation was publicly condemned by Israel's ambassador to Canada, sparking significant public discourse about censorship and Palestinian art. One video documented experiences in Bil'in where activists were attacked during protests. Another featured over 127 rapidly flashing images of Palestinians who were extrajudicially assassinated.</p>
                         </div>
                         <div>
                             <img src="assets/img/driving-in-palestine-gallery-wall.jpg" alt="Gallery installation" class="project-image">
@@ -627,7 +606,7 @@
                         <div>
                             <div class="item-meta">Documentary · 2015</div>
                             <h3>Canada Park</h3>
-                            <p>Documentary examining Canada Park in Israel, built on the ruins of three Palestinian villages—Imwas, Yalo, and Beit Nuba—destroyed in 1967, exposing how colonial infrastructure obscures displacement and erases Palestinian history.</p>
+                            <p>Documentary examining Canada Park in Israel, built on the ruins of three Palestinian villages—Imwas, Yalo, and Beit Nuba—destroyed in 1967. The work exposes how colonial infrastructure obscures displacement and erases Palestinian history through the creation of recreational spaces.</p>
                         </div>
                         <div>
                             <img src="assets/img/dead-sea-collection.jpg" alt="Canada Park" class="project-image">
@@ -638,7 +617,7 @@
                         <div>
                             <div class="item-meta">Ongoing Project</div>
                             <h3>Sonic Torture</h3>
-                            <p>A sound-animation project focusing on the use of sound and music in the torture of political prisoners, examining how sonic warfare is deployed as a tool of settler-colonial violence.</p>
+                            <p>A sound-animation project focusing on the use of sound and music in the torture of political prisoners, examining how sonic warfare is deployed as a tool of settler-colonial violence and psychological control.</p>
                         </div>
                         <div>
                             <img src="assets/img/dead-sea-edited2.jpg" alt="Sonic Torture" class="project-image">
@@ -797,10 +776,10 @@
                 <h2>Education</h2>
                 <div class="exhibition-list">
                     <div class="exhibition-item">
-                        <p><strong>PhD</strong> in Art and Visual Culture — University of Western Ontario, Canada</p>
-                        <p><strong>MFA</strong> — Toronto Metropolitan University (formerly Ryerson University), Toronto</p>
-                        <p><strong>BFA</strong> — University of Ottawa</p>
-                        <p><strong>BA</strong> in Economics — Damascus University, Syria</p>
+                        <p>PhD in Art and Visual Culture — University of Western Ontario, Canada</p>
+                        <p>MFA — Toronto Metropolitan University (formerly Ryerson University), Toronto</p>
+                        <p>BFA — University of Ottawa</p>
+                        <p>BA in Economics — Damascus University, Syria</p>
                     </div>
                 </div>
             </section>
