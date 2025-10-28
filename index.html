@@ -9,426 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --text-primary: #0a0a0a;
-            --text-secondary: #525252;
-            --text-tertiary: #a3a3a3;
-            --border: #e5e5e5;
-            --bg: #ffffff;
-            --bg-secondary: #fafafa;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.65;
-            color: var(--text-primary);
-            background: var(--bg);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        ::selection {
-            background: var(--text-primary);
-            color: var(--bg);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 1.25rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 500;
-            font-size: 1rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .logo.visible {
-            opacity: 1;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            transition: color 0.2s ease;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--text-primary);
-        }
-
-        /* Full-width Video Hero */
-        .video-hero {
-            width: 100%;
-            height: 50vh;
-            min-height: 400px;
-            max-height: 600px;
-            margin-top: 72px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .video-hero video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.95);
-        }
-
-        /* Container */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Page Views */
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 100px 0 100px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero h1 {
-            font-size: 3.75rem;
-            font-weight: 300;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.04em;
-            color: var(--text-primary);
-        }
-
-        .hero .subtitle {
-            font-size: 1.375rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-        }
-
-        .hero .bio {
-            font-size: 1.0625rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
-            max-width: 720px;
-        }
-
-        .hero .bio p {
-            margin-bottom: 1.25rem;
-        }
-
-        /* Links */
-        .links {
-            margin-top: 2.5rem;
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .links a {
-            color: var(--text-tertiary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            transition: color 0.2s ease;
-            position: relative;
-        }
-
-        .links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--text-primary);
-            transition: width 0.2s ease;
-        }
-
-        .links a:hover {
-            color: var(--text-primary);
-        }
-
-        .links a:hover::after {
-            width: 100%;
-        }
-
-        /* Section */
-        .section {
-            padding: 100px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.75rem;
-            font-weight: 500;
-        }
-
-        .section-subtitle {
-            font-size: 2rem;
-            font-weight: 300;
-            letter-spacing: -0.03em;
-            color: var(--text-primary);
-        }
-
-        /* Items List */
-        .items-list {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-
-        .item {
-            transition: opacity 0.2s ease;
-        }
-
-        .item-meta {
-            color: var(--text-tertiary);
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.02em;
-        }
-
-        .item h3 {
-            font-size: 1.375rem;
-            font-weight: 400;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .item h3 a {
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .item h3 a:hover {
-            color: var(--text-secondary);
-        }
-
-        .item p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .item .additional-info {
-            color: var(--text-tertiary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Project Media */
-        .project-media {
-            margin-top: 2rem;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-        }
-
-        .project-media img,
-        .project-media video {
-            width: 100%;
-            display: block;
-        }
-
-        .media-link {
-            display: block;
-            padding: 1rem 1.25rem;
-            background: var(--bg-secondary);
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            border-top: 1px solid var(--border);
-        }
-
-        .media-link a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .media-link a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid var(--border);
-            margin-top: 100px;
-        }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        footer p {
-            color: var(--text-tertiary);
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-tertiary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-
-        /* Image Grid */
-        .image-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .image-grid img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid var(--border);
-        }
-
-        @media (min-width: 768px) {
-            .image-grid.two-col {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Exhibition List */
-        .exhibition-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .exhibition-item {
-            line-height: 1.7;
-        }
-
-        .exhibition-item p {
-            margin-bottom: 0.75rem;
-            color: var(--text-secondary);
-        }
-
-        .exhibition-item p:first-child {
-            color: var(--text-primary);
-        }
-
-        .exhibition-item strong {
-            font-weight: 500;
-        }
-
-        /* Section h2 styling */
-        section h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.125rem;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-
-            .video-hero {
-                height: 40vh;
-                min-height: 300px;
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -476,31 +58,40 @@
                     <h2 class="section-subtitle">Featured Projects</h2>
                 </div>
 
-                <div class="items-list">
-                    <div class="item">
-                        <div class="item-meta">Film · 2024</div>
-                        <h3><a href="#" onclick="showPage('projects'); return false;">Vibrations from Gaza</a></h3>
-                        <p>A short film created with Deaf children and families in Gaza. Rather than audible explosions, the work centres vibration as a primary sense—how war registers through the body when sound is inaccessible or unsafe.</p>
-                        <div class="project-media">
-                            <img src="assets/img/vibrations-in-gaza-film-cover.png" alt="Vibrations from Gaza film cover">
+                <div class="project-grid">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Film · 2024 · Award-Winning</div>
+                            <h3><a href="#" onclick="showPage('projects'); return false;">Vibrations from Gaza</a></h3>
+                            <p>A short documentary created with Deaf children and families in Gaza. Rather than audible explosions, the work centres vibration as a primary sense—how war registers through the body when sound is inaccessible or unsafe.</p>
+                            <p class="additional-info">Winner of Best Short Film at the 2024 BFI London Film Festival and Prix Iris for Best Short Documentary at the 26th Quebec Cinema Awards. The jury praised the film for using "sound to send reverberations through our bodies and souls," demanding presence and deep reflection on growing up deaf in Gaza.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/vibrations-in-gaza-film-cover.png" alt="Vibrations from Gaza film cover" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Photography · Book · 2010–2023</div>
-                        <h3><a href="#" onclick="showPage('projects'); return false;">Driving in Palestine</a></h3>
-                        <p>Photographs from moving vehicles trace watchtowers, walls, and checkpoints in the West Bank—mapping architectures of control alongside everyday movement. Published by Fernwood Publishing with essays in English and Arabic.</p>
-                        <div class="project-media">
-                            <img src="assets/img/driving-book-cover.jpg" alt="Driving in Palestine book cover">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Photography · Book · 2010–2023</div>
+                            <h3><a href="#" onclick="showPage('projects'); return false;">Driving in Palestine</a></h3>
+                            <p>Photographs from moving vehicles trace watchtowers, walls, and checkpoints in the West Bank—mapping architectures of control alongside everyday movement. Published by Fernwood Publishing with essays in English and Arabic.</p>
+                            <p class="additional-info">Features 160 black and white photographs with hand-drawn maps and critical essays by Palestinian and Canadian scholars and artists, including Mohammed El-Kurd. The book documents the politics of surveillance and mobility from 2010 to 2020.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/driving-book-cover.jpg" alt="Driving in Palestine book cover" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Photography · Ongoing · 2022–</div>
-                        <h3><a href="#" onclick="showPage('projects'); return false;">We, the Wild Plants and Fruit Trees</a></h3>
-                        <p>Photographs and field notes following wild flora and cultivated trees as living records of enclosure and care.</p>
-                        <div class="project-media">
-                            <img src="assets/img/We, the Wild Plants and Fruit Trees.jpg" alt="We, the Wild Plants and Fruit Trees">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Photography · Ongoing · 2022–</div>
+                            <h3><a href="#" onclick="showPage('projects'); return false;">We, the Wild Plants and Fruit Trees</a></h3>
+                            <p>Photographs and field notes following wild flora and cultivated trees as living records of enclosure and care.</p>
+                            <p class="additional-info">Featured in The Willful Plot exhibition at the Morris and Helen Belkin Art Gallery (2023), exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. The work gives agency to wild plants growing through ruined Palestinian villages.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/We, the Wild Plants and Fruit Trees.jpg" alt="We, the Wild Plants and Fruit Trees" class="project-image">
                         </div>
                     </div>
                 </div>
@@ -517,60 +108,86 @@
                     <h2 class="section-subtitle">Projects</h2>
                 </div>
 
-                <div class="items-list">
-                    <div class="item">
-                        <div class="item-meta">Film · 2024</div>
-                        <h3>Vibrations from Gaza</h3>
-                        <p>A short documentary that centers Deaf children in Gaza who perceive bombardment through vibration rather than sound. The work foregrounds touch, tremor, and the constant presence of drones to rethink how violence is sensed and experienced by those who navigate the world differently.</p>
-                        <p class="additional-info">By focusing on the tactile and vibrational dimensions of warfare, the film challenges conventional understandings of how conflict is witnessed and endured, offering insight into the multisensory realities of life under siege.</p>
-                        <div class="image-grid two-col">
-                            <img src="assets/img/vibrations-in-gaza-still.jpg" alt="Vibrations from Gaza still">
-                            <img src="assets/img/vibrations-in-gaza-film-cover.png" alt="Vibrations from Gaza cover">
+                <div class="project-grid">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Film · 2024 · 16 minutes</div>
+                            <h3>Vibrations from Gaza</h3>
+                            <p>A short documentary that centers Deaf children in Gaza who perceive bombardment through vibration rather than sound. The work foregrounds touch, tremor, and the constant presence of drones to rethink how violence is sensed and experienced.</p>
+                            <p class="additional-info">Winner of Best Short Film at the 2024 BFI London Film Festival, Prix Iris for Best Short Documentary at the 26th Quebec Cinema Awards, Cinema Politica Audience Choice Award, Best Short at Iran International Film Festival, and Azur Phoenix Award at the Middle East and South Africa Film Festival. Born and raised under the 17-year-long siege and frequent Israeli military assaults, children Amani, Musa, Israa and others provide vivid accounts of their experiences of bombardment through sensing vibrations in the air, tremors in the ground, and echoes of collapsing buildings.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/vibrations-in-gaza-still.jpg" alt="Vibrations from Gaza still" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Photography · Book · 2010–2023</div>
-                        <h3>Driving in Palestine</h3>
-                        <p>A decade-long photographic study produced from inside moving vehicles across the West Bank. The series records checkpoints, watchtowers, walls, signage, and small gestures of daily life, assembling a road atlas of constraint and endurance.</p>
-                        <p class="additional-info">Published by Fernwood Publishing in 2023, featuring 160 black and white photographs with hand-drawn maps and critical essays in English and Arabic by Palestinian and Canadian scholars and artists.</p>
-                        <div class="image-grid">
-                            <img src="assets/img/driving-book-cover.jpg" alt="Driving in Palestine book cover">
-                            <img src="assets/img/driving-in-palestine-1.png" alt="Driving in Palestine">
-                            <img src="assets/img/driving-in-palestine-2.png" alt="Driving in Palestine">
-                            <img src="assets/img/driving-in-palestine-gallery-wall.jpg" alt="Gallery installation">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Photography · Book · 2010–2023</div>
+                            <h3>Driving in Palestine</h3>
+                            <p>A decade-long photographic study produced from inside moving vehicles across the West Bank. The series records checkpoints, watchtowers, walls, signage, and small gestures of daily life, assembling a road atlas of constraint and endurance.</p>
+                            <p class="additional-info">Published by Fernwood Publishing in 2023, featuring 160 black and white photographs with hand-drawn maps and critical essays in English and Arabic by Palestinian and Canadian scholars and artists including Mohammed El-Kurd. The book explores how fragmentation and coded areas control Palestinian movement while privileging Jewish settlers. Exhibited at MAI Montréal (2023) as a multimedia installation with photographs, video, sound, and printed matter.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/driving-in-palestine-1.png" alt="Driving in Palestine" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Photography · Ongoing · 2022–</div>
-                        <h3>We, the Wild Plants and Fruit Trees</h3>
-                        <p>An ongoing series of photographs and notes tracing the lives of wild flora and cultivated trees within militarized ecologies. This work examines how plants bear witness to land use, enclosure, displacement, and care.</p>
-                        <p class="additional-info">Through images of fig trees, olive groves, wild herbs, and resilient vegetation growing through ruins, the project explores botany as a form of memory and resistance.</p>
-                        <div class="image-grid">
-                            <img src="assets/img/We, the Wild Plants and Fruit Trees.jpg" alt="Wild Plants 1">
-                            <img src="assets/img/We, the Wild Plants and Fruit Trees-1.jpeg" alt="Wild Plants 2">
-                            <img src="assets/img/We, the Wild Plants and Fruit Trees-2.jpeg" alt="Wild Plants 3">
-                            <img src="assets/img/We, the Wild Plants and Fruit Trees-3.jpeg" alt="Wild Plants 4">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Photography · Installation · Ongoing · 2022–</div>
+                            <h3>We, the Wild Plants and Fruit Trees</h3>
+                            <p>An ongoing series of photographs and notes tracing the lives of wild flora and cultivated trees within militarized ecologies. Through images of fig, olive, pomegranate, cactus, za'atar, and other plants, the project explores how plants bear witness to land use, enclosure, displacement, and care.</p>
+                            <p class="additional-info">Featured in The Willful Plot at the Morris and Helen Belkin Art Gallery (January–April 2023), alongside Canada Park (2015). The exhibition explored gardens as sites of tension between wild and cultivated, sovereign and colonized. These plants persist despite attempts to erase Palestinian presence from the land, becoming living archives of cultural and ecological knowledge.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/We, the Wild Plants and Fruit Trees-1.jpeg" alt="Wild Plants" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Photography · Environmental</div>
-                        <h3>Dead Sea Study</h3>
-                        <p>Shoreline studies at the Dead Sea examining extraction, subsidence, and environmental transformation.</p>
-                        <div class="image-grid">
-                            <img src="assets/img/dead-sea06.jpg" alt="Dead Sea Study">
-                            <img src="assets/img/dead-sea01-1.jpg" alt="Dead Sea Study">
-                            <img src="assets/img/dead-sea-collection.jpg" alt="Dead Sea Collection">
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Photography · Environmental</div>
+                            <h3>Dead Sea Study</h3>
+                            <p>Shoreline studies at the Dead Sea examining extraction, subsidence, and environmental transformation. The work documents the dramatic changes to the landscape caused by mineral extraction and water diversion.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/dead-sea06.jpg" alt="Dead Sea Study" class="project-image">
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item-meta">Installation · 2014</div>
-                        <h3>Invisible</h3>
-                        <p>A video and photographic installation engaging with incarceration and political prisoners. The work includes four video pieces and 1,700 photographs forming a field of fragments and testimony.</p>
-                        <p class="additional-info">Exhibited at Karsh-Masson Gallery in Ottawa City Hall, the installation was publicly condemned by Israel's ambassador to Canada, sparking important conversations about censorship, representation, and the politics of Palestinian art in Canada.</p>
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Installation · 2014</div>
+                            <h3>Invisible</h3>
+                            <p>A multimedia installation engaging with incarceration and political prisoners, featuring four videos and 1,700 photographs. One video, <em>Bil'in</em>, documented the artist's experience in the village where Palestinians and international solidarity activists were physically attacked by Israeli forces during weekly protests against land confiscation.</p>
+                            <p class="additional-info">Exhibited at Karsh-Masson Gallery in Ottawa City Hall (2014), the installation was publicly condemned by Israel's ambassador to Canada, Rafael Barak, sparking significant public discourse about censorship and Palestinian art. Another video, <em>Target</em>, consisted of over 127 rapidly flashing images of Palestinians who were extrajudicially assassinated, including the artist's own brother, killed in Athens in 1986 at age 38.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/driving-in-palestine-gallery-wall.jpg" alt="Gallery installation" class="project-image">
+                        </div>
+                    </div>
+
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Documentary · 2015</div>
+                            <h3>Canada Park</h3>
+                            <p>Documentary examining Canada Park in Israel, built on the ruins of three Palestinian villages—Imwas, Yalo, and Beit Nuba—destroyed in 1967, exposing how colonial infrastructure obscures displacement and erases Palestinian history.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/dead-sea-collection.jpg" alt="Canada Park" class="project-image">
+                        </div>
+                    </div>
+
+                    <div class="project-row">
+                        <div>
+                            <div class="item-meta">Ongoing Project</div>
+                            <h3>Sonic Torture</h3>
+                            <p>A sound-animation project focusing on the use of sound and music in the torture of political prisoners, examining how sonic warfare is deployed as a tool of settler-colonial violence.</p>
+                        </div>
+                        <div>
+                            <img src="assets/img/dead-sea-edited2.jpg" alt="Sonic Torture" class="project-image">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -590,7 +207,7 @@
                 <div class="exhibition-list">
                     <div class="exhibition-item">
                         <p><strong>Invisible</strong> — Karsh-Masson Gallery, Ottawa City Hall (2014)</p>
-                        <p>Multimedia installation featuring four videos and 1,700 photographs addressing incarceration, political prisoners, and extrajudicial killings.</p>
+                        <p>Multimedia installation featuring four videos and 1,700 photographs addressing incarceration, political prisoners, and extrajudicial killings. The exhibition included images of Palestinian prisoners in Israeli prisons and artwork portraying the West Bank and Gaza. Publicly condemned by Israel's ambassador to Canada, Rafael Barak, the exhibition sparked significant public discourse about censorship and Palestinian representation in Canadian institutions. One video, <em>Bil'in</em>, documented experiences in the village where Palestinians and international solidarity activists were attacked by Israeli forces during weekly protests. Another video, <em>Target</em>, featured over 127 rapidly flashing images of Palestinians who were extrajudicially assassinated, including the artist's brother, killed in Athens in 1986.</p>
                     </div>
 
                     <div class="exhibition-item">
@@ -601,34 +218,54 @@
             </section>
 
             <section class="section">
-                <h2>Group Exhibitions</h2>
+                <h2>Group Exhibitions & Installations</h2>
                 <div class="exhibition-list">
                     <div class="exhibition-item">
-                        <p><strong>The Willful Plot</strong> — Morris and Helen Belkin Art Gallery, Vancouver (2023)</p>
-                        <p>Group exhibition exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. Featured <em>Canada Park</em> (2015) and <em>We, the Wild Plants and Fruit Trees</em> (2022).</p>
+                        <p><strong>The Willful Plot</strong> — Morris and Helen Belkin Art Gallery, Vancouver (January–April 2023)</p>
+                        <p>Group exhibition exploring gardens as sites of tension between wild and cultivated, temporal and perpetual, sovereign and colonized. Featured <em>Canada Park</em> (2015) and <em>We, the Wild Plants and Fruit Trees</em> (2022). The exhibition brought together artists' practices to expand the notion of the garden, with Nazzal's photography and film giving agency to wild plants growing through ruined Palestinian villages, connecting people to land even as parks and gardens are created as tools of displacement.</p>
                     </div>
 
                     <div class="exhibition-item">
                         <p><strong>Driving in Palestine</strong> — Montréal, arts interculturels (MAI) (September–October 2023)</p>
-                        <p>Installation with photographs, video, sound, and printed matter.</p>
+                        <p>Installation with photographs, video, sound, and printed matter from the decade-long photographic study.</p>
                     </div>
 
                     <div class="exhibition-item">
-                        <p><strong>On Borrowed Time in Gaza: Art in Confinement</strong> — Monica Reyes Gallery (2021)</p>
-                        <p>Fundraiser/solidarity exhibition featuring ~200 works by artists in Gaza; proceeds supported artists and art-therapy programs.</p>
+                        <p><strong>On Borrowed Time in Gaza: Art in Confinement</strong> — Monica Reyes Gallery, Vancouver (November 2021)</p>
+                        <p>Fundraiser and solidarity exhibition featuring approximately 200 works by six Palestinian artists based in Gaza: Maisara Baroud, Majdal Nateel, Ghanem Al-Den, Rufaida Sehwail, Mohammed Alhaj, and Maha Daya. Nazzal carried the artwork in her suitcase through the Rafah crossing. All proceeds supported the artists and art-therapy programs in Gaza. The exhibition represented expressions from life in Gaza by artists defying the brutal Israeli blockade imposed on over two million Palestinians since 2007.</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p><strong>Additional Exhibitions</strong> — Prefix Institute of Contemporary Art, CONTACT Photography Festival, Toronto Images Festival, A Space Gallery (Toronto), AXNEO 7 (Quebec), McIntosh Art Gallery (London, ON), Khalil Sakakini Center (Ramallah), Art Gallery of Mississauga, San Francisco Museum of Modern Art, Spanish Institute of Art, International Durzfilmtage Oberhausen (Germany)</p>
                     </div>
                 </div>
             </section>
 
             <section class="section">
-                <h2>Film Festivals & Screenings</h2>
+                <h2>Film Festival Screenings & Awards</h2>
                 <div class="exhibition-list">
                     <div class="exhibition-item">
-                        <p>International Yellowknife Film Festival</p>
-                        <p>Montreal Palestine Film Festival</p>
-                        <p>SAW Video for the Media Arts</p>
-                        <p>International Mini Print Festival</p>
-                        <p>Ottawa X-photography Festival</p>
+                        <p><strong>Vibrations from Gaza</strong> — Awards & Screenings (2024–2025)</p>
+                        <p>Winner of Best Short Film at 2024 BFI London Film Festival; Prix Iris for Best Short Documentary at 26th Quebec Cinema Awards; Cinema Politica Audience Choice Award for Best Short Film (2024); Best Short at Iran International Film Festival; Azur Phoenix Award for Short Films at Middle East and South Africa Film Festival. Screened at Palestine Cinema Days Film Festival (world premiere), Montreal Palestine Film Festival, International Yellowknife Film Festival, MENA Film Festival, REGARD Festival, and numerous other international venues.</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p><strong>Additional Festival Appearances</strong></p>
+                        <p>SAW Video for the Media Arts, International Mini Print Festival, Ottawa X-photography Festival, Toronto-Palestine Film Festival</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Artist Talks & Public Programs</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>Driving in Palestine Book Launch</strong> — The Polygon Gallery, Vancouver (August 2023)</p>
+                        <p>West Coast book launch featuring a conversation between Rehab Nazzal and artist Jayce Salloum, presented in partnership with Or Gallery and the Morris and Helen Belkin Art Gallery.</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p>Nazzal regularly presents her work and research at universities, galleries, and community venues, including presentations at academic institutions and community organizations focused on Palestinian solidarity and documentary arts.</p>
                     </div>
                 </div>
             </section>
@@ -687,13 +324,17 @@
 
             <section class="section">
                 <div class="bio">
-                    <p>Rehab Nazzal is a Palestinian-born multidisciplinary artist whose work examines mobility, vibration, incarceration, and ecologies of care in Palestine. Working across photography, video, sound, and installation, she explores how structures of control shape sensing and everyday movement.</p>
+                    <p>Rehab Nazzal is a Palestinian-born multidisciplinary artist whose work examines mobility, vibration, incarceration, and ecologies of care in Palestine. Working across photography, video, sound, and installation, she explores how structures of control shape sensing and everyday movement. Born in Jenin in the occupied West Bank, Nazzal is currently based between Montréal and Bethlehem.</p>
                     
-                    <p>Her practice centers on the effects of settler-colonial violence on the bodies and minds of colonized peoples, on the land, and on other non-human life. Through documentary approaches and immersive installations, she creates spaces for witnessing and understanding Palestinian experience.</p>
+                    <p>Her practice centers on the effects of settler-colonial violence on the bodies and minds of colonized peoples, on the land, and on other non-human life. Through documentary approaches and immersive installations, she creates spaces for witnessing and understanding Palestinian experience, often creating immersive environments that represent the struggle of the Palestinian people.</p>
                     
-                    <p>Nazzal's work has been exhibited internationally at institutions including the Morris and Helen Belkin Art Gallery, Karsh-Masson Gallery, Gallery 101, and numerous film festivals and art venues. In 2014, her exhibition <em>Invisible</em> at Ottawa City Hall sparked significant public discourse when it was condemned by Israel's ambassador to Canada.</p>
+                    <p>Nazzal's work has been exhibited internationally at institutions including the Morris and Helen Belkin Art Gallery, Karsh-Masson Gallery, Gallery 101, San Francisco Museum of Modern Art, Spanish Institute of Art, Prefix Institute of Contemporary Art, and numerous film festivals and art venues across Canada, Palestine, and globally.</p>
                     
-                    <p>In December 2015, while photographing a military raid in occupied Palestine, Nazzal was shot in the leg by an Israeli sniper—a stark reminder of the risks faced by those documenting occupation.</p>
+                    <p>In 2014, her exhibition <em>Invisible</em> at Ottawa City Hall sparked significant public discourse when it was publicly condemned by Israel's ambassador to Canada, Rafael Barak. The controversy brought attention to issues of censorship and Palestinian representation in Canadian cultural institutions.</p>
+                    
+                    <p>In December 2015, while photographing a military raid in occupied Palestine, Nazzal was shot in the leg by an Israeli sniper—a stark reminder of the risks faced by those documenting occupation. As she stated, "This was not an accident."</p>
+
+                    <p>Her 2024 documentary <em>Vibrations from Gaza</em> has received international acclaim, winning Best Short Film at the BFI London Film Festival and the Prix Iris for Best Short Documentary, among other awards.</p>
                 </div>
             </section>
 
@@ -702,7 +343,7 @@
                 <div class="exhibition-list">
                     <div class="exhibition-item">
                         <p><strong>PhD</strong> in Art and Visual Culture — University of Western Ontario, Canada</p>
-                        <p><strong>MFA</strong> — Toronto Metropolitan University (formerly Ryerson University)</p>
+                        <p><strong>MFA</strong> — Toronto Metropolitan University (formerly Ryerson University), Toronto</p>
                         <p><strong>BFA</strong> — University of Ottawa</p>
                         <p><strong>BA</strong> in Economics — Damascus University, Syria</p>
                     </div>
@@ -713,10 +354,29 @@
                 <h2>Awards & Recognition</h2>
                 <div class="exhibition-list">
                     <div class="exhibition-item">
-                        <p>Social Sciences and Humanities Research Council (SSHRC) Doctoral Award</p>
-                        <p>Documentary Photography for Social Justice Award — Toronto Metropolitan University</p>
-                        <p>Edmund and Isobel Ryan Visual Arts Award in Photography — University of Ottawa</p>
-                        <p>Ontario Graduate Scholarship</p>
+                        <p><strong>Film Awards (2024-2025):</strong></p>
+                        <p>• Best Short Film — 2024 BFI London Film Festival</p>
+                        <p>• Prix Iris for Best Short Documentary — 26th Quebec Cinema Awards</p>
+                        <p>• Audience Choice Award for Best Short Film — Cinema Politica (2024)</p>
+                        <p>• Best Short Film — Iran International Film Festival</p>
+                        <p>• Azur Phoenix Award for Short Films — Middle East and South Africa Film Festival</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p><strong>Academic & Research Awards:</strong></p>
+                        <p>• Social Sciences and Humanities Research Council (SSHRC) Doctoral Award</p>
+                        <p>• Ontario Graduate Scholarship (OGS)</p>
+                        <p>• Canada Council for the Arts</p>
+                        <p>• Ontario Arts Council</p>
+                        <p>• City of Ottawa Grant</p>
+                    </div>
+
+                    <div class="exhibition-item">
+                        <p><strong>University Awards:</strong></p>
+                        <p>• Documentary Photography for Social Justice Award — Toronto Metropolitan University</p>
+                        <p>• Edmund and Isobel Ryan Visual Arts Award in Photography — University of Ottawa</p>
+                        <p>• University of Western Ontario Scholarships</p>
+                        <p>• Ryerson University Scholarship</p>
                     </div>
                 </div>
             </section>
@@ -725,7 +385,18 @@
                 <h2>Teaching & Research</h2>
                 <div class="exhibition-list">
                     <div class="exhibition-item">
-                        <p>Dr. Nazzal has taught at Dar Al-Kalima University in Bethlehem, Simon Fraser University, Western University, and Ottawa School of Art. She is currently a Postdoctoral Fellow at Concordia University.</p>
+                        <p>Dr. Nazzal has taught at Dar Al-Kalima University in Bethlehem (as Assistant Professor), Simon Fraser University, Western University, and Ottawa School of Art. She is currently a Postdoctoral Fellow at Concordia University.</p>
+                        <p>As a practicing artist, activist, and educator, she considers critical thinking, engagement with the community and with nature to be central to creative processes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Press & Interviews</h2>
+                <div class="exhibition-list">
+                    <div class="exhibition-item">
+                        <p><strong>"Behind the lens: An artist under military occupation"</strong> — CBC Arts (December 2023)</p>
+                        <p>Extended interview discussing documentary practice, political art, and life in the West Bank during crisis. The interview was conducted while Nazzal was in Bethlehem after being unable to leave for more than a week when Israel blocked off the West Bank following the eruption of violence on October 7, 2023.</p>
                     </div>
                 </div>
             </section>
